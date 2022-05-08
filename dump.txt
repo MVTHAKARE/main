@@ -1,0 +1,185 @@
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder
+$ ls
+'New Text Document.txt'   commands.txt   desktop.ini   test.txt
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder
+$ git init
+Initialized empty Git repository in C:/git learn folder/.git/
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ git status
+On branch master
+
+
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+        commands.txt
+        desktop.ini
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ git commit -m"first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'thakare@DESKTOP-3RFKB0K.(none)')
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ ^C
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$  git config --global mvthakare@gmail.com
+error: invalid key: mvthakare@gmail.com
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$  git config --global "mvthakare@gmail.com"
+error: invalid key: mvthakare@gmail.com
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ ^C
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ git config --global user.email "mvthakare2020@gmail.com"
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$  git config --global user.name "MVTHAKARE"
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+        commands.txt
+        desktop.ini
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ git add .
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ git commit -m"first commit"
+[master (root-commit) 7e640f5] first commit
+ 4 files changed, 14 insertions(+)
+ create mode 100644 New Text Document.txt
+ create mode 100644 commands.txt
+ create mode 100644 desktop.ini
+ create mode 100644 test.txt
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (master)
+$ git branch -M main
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git remote add origin https://github.com/MVTHAKARE/main.git
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git push -u origin main
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git remote add origin https://github.com/MVTHAKARE/main.git
+error: remote origin already exists.
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 613 bytes | 613.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/MVTHAKARE/main.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 657 bytes | 65.00 KiB/s, done.
+From https://github.com/MVTHAKARE/main
+ * branch            main       -> FETCH_HEAD
+   7e640f5..0d91c42  main       -> origin/main
+Updating 7e640f5..0d91c42
+Fast-forward
+ test.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git init
+Reinitialized existing Git repository in C:/git learn folder/.git/
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git add .
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git commit -m"second commit"
+[main d96253e] second commit
+ 1 file changed, 3 insertions(+)
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MVTHAKARE/main.git
+   0d91c42..d96253e  main -> main
+branch 'main' set up to track 'origin/main'.
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 694 bytes | 25.00 KiB/s, done.
+From https://github.com/MVTHAKARE/main
+ * branch            main       -> FETCH_HEAD
+   d96253e..82763d2  main       -> origin/main
+Updating d96253e..82763d2
+Fast-forward
+ test.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+thakare@DESKTOP-3RFKB0K MINGW64 /c/git learn folder (main)
+$
